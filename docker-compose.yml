@@ -1,0 +1,32 @@
+version: '3.0'
+services:
+    tasklist-service:
+        image: service-task-list:1.0.0
+        stdin_open: true
+        tty: true
+        container_name: service-task-list
+        restart: always
+        environment:
+            TZ: "Asia/Jakarta"
+            MYSQL_URL: "root:root@tcp(db:3306)/service_xyz?parseTime=true"
+        ports:
+            -  8001:8001
+        volumes:
+            - ./log/service.log:/app/cmd/log/service.log
+            - ./config/config.yml:/app/cmd/config/config.yml
+            - /etc/hosts:/etc/hosts
+        depends_on:
+            - db
+    db:
+        image: mysql:8.0
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: service-task-list
+        ports:
+            - '3306:3306'
+        volumes:
+            - db_data:/var/lib/mysql
+            - ./database:/scripts
+volumes:
+    db_data: {}

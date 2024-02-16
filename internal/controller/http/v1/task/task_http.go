@@ -107,7 +107,7 @@ func (c *TaskRoutes) CheckTask(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		defer c.l.CreateLog(&logger.Log{
 			Event:      commons.FAIL_CHECK_TASK + "|CHECKLIST|CONVERT_ID",
-			Method:     "POST",
+			Method:     http.MethodPut,
 			StatusCode: http.StatusInternalServerError,
 			Request:    intTaskId,
 			Response:   err,
@@ -121,7 +121,7 @@ func (c *TaskRoutes) CheckTask(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		defer c.l.CreateLog(&logger.Log{
 			Event:      commons.FAIL_CHECK_TASK + "|CHECKLIST",
-			Method:     "POST",
+			Method:     http.MethodPut,
 			StatusCode: http.StatusInternalServerError,
 			Request:    intTaskId,
 			Response:   err,
@@ -144,6 +144,21 @@ func (c *TaskRoutes) CheckTask(w http.ResponseWriter, r *http.Request) {
 }
 
 func (c *TaskRoutes) UpdateTask(w http.ResponseWriter, r *http.Request) {
+	param := mux.Vars(r)
+	taskId := param["task_id"]
+	intTaskId, err := strconv.Atoi(taskId)
+	if err != nil {
+		defer c.l.CreateLog(&logger.Log{
+			Event:      commons.FAIL_UPDATE_TASK + "|CONVERT_ID",
+			Method:     http.MethodPut,
+			StatusCode: http.StatusInternalServerError,
+			Request:    intTaskId,
+			Response:   err,
+			Message:    commons.FAIL_UPDATE_TASK,
+		}, logger.LVL_ERROR)
+		http_resp.HttpErrorResponse(w, false, http.StatusInternalServerError, "500", err.Error())
+		return
+	}
 	var payload entity.Task
 
 	decoder := json.NewDecoder(r.Body)
@@ -152,30 +167,44 @@ func (c *TaskRoutes) UpdateTask(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err := c.tu.UpdateTask(&payload)
-	if err != nil {
+	if intTaskId == payload.ID {
+		err := c.tu.UpdateTask(&payload)
+		if err != nil {
+			defer c.l.CreateLog(&logger.Log{
+				Event:      commons.FAIL_UPDATE_TASK,
+				Method:     http.MethodPut,
+				StatusCode: http.StatusInternalServerError,
+				Request:    payload,
+				Response:   err,
+				Message:    commons.FAIL_UPDATE_TASK,
+			}, logger.LVL_ERROR)
+			http_resp.HttpErrorResponse(w, false, http.StatusInternalServerError, "500", err.Error())
+			return
+		}
+
+		c.l.CreateLog(&logger.Log{
+			Event:      commons.SUCCESS_UPDATE_TASK,
+			Method:     http.MethodPut,
+			StatusCode: http.StatusOK,
+			Request:    payload,
+			Response:   err,
+			Message:    commons.SUCCESS_UPDATE_TASK,
+		}, logger.LVL_INFO)
+		http_resp.HttpSuccessResponse(w, true, http.StatusOK, "200", commons.SUCCESS_UPDATE_TASK, err)
+		return
+	} else {
 		defer c.l.CreateLog(&logger.Log{
-			Event:      commons.FAIL_UPDATE_TASK + "|CHECKLIST",
-			Method:     "POST",
-			StatusCode: http.StatusInternalServerError,
+			Event:      commons.FAIL_UPDATE_TASK,
+			Method:     http.MethodPut,
+			StatusCode: http.StatusBadRequest,
 			Request:    payload,
 			Response:   err,
 			Message:    commons.FAIL_UPDATE_TASK,
 		}, logger.LVL_ERROR)
-		http_resp.HttpErrorResponse(w, false, http.StatusInternalServerError, "500", err.Error())
+		http_resp.HttpErrorResponse(w, false, http.StatusBadRequest, "400", "ID not match")
 		return
 	}
 
-	c.l.CreateLog(&logger.Log{
-		Event:      commons.SUCCESS_UPDATE_TASK + "|CHECKLIST",
-		Method:     http.MethodPut,
-		StatusCode: http.StatusOK,
-		Request:    payload,
-		Response:   err,
-		Message:    commons.SUCCESS_UPDATE_TASK,
-	}, logger.LVL_INFO)
-
-	http_resp.HttpSuccessResponse(w, true, http.StatusOK, "200", commons.SUCCESS_UPDATE_TASK, err)
 }
 
 func (c *TaskRoutes) DeleteTask(w http.ResponseWriter, r *http.Request) {

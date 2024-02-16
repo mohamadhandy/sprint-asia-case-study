@@ -10,8 +10,9 @@ import (
 type ITaskUseCase interface {
 	GetTaskList(completed int) ([]*entity.Task, error)
 	CreateTask(task *entity.TaskRequest) error
-	CheckTask(task *entity.Task) error
+	CheckTask(id int) error
 	UpdateTask(task *entity.Task) error
+	DeleteTask(id int) error
 }
 
 type TaskUseCase struct {
@@ -40,8 +41,8 @@ func (t *TaskUseCase) CreateTask(task *entity.TaskRequest) error {
 	return nil
 }
 
-func (t *TaskUseCase) CheckTask(task *entity.Task) error {
-	err := t.tr.CheckTask(task)
+func (t *TaskUseCase) CheckTask(id int) error {
+	err := t.tr.CheckTask(id)
 	if err != nil {
 		return err
 	}
@@ -50,6 +51,14 @@ func (t *TaskUseCase) CheckTask(task *entity.Task) error {
 
 func (t *TaskUseCase) UpdateTask(task *entity.Task) error {
 	err := t.tr.UpdateTask(task)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func (t *TaskUseCase) DeleteTask(id int) error {
+	err := t.tr.DeleteTask(id)
 	if err != nil {
 		return err
 	}

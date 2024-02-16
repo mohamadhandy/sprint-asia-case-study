@@ -10,9 +10,9 @@ import (
 type TaskRepository interface {
 	GetTaskList(completed int) ([]*entity.Task, error)
 	CreateTask(task *entity.TaskRequest) error
-	// GetHistoryTaskList() ([]*entity.Task, error)
-	CheckTask(task *entity.Task) error
+	CheckTask(id int) error
 	UpdateTask(task *entity.Task) error
+	DeleteTask(id int) error
 }
 
 type TaskMysqlRepo struct {
@@ -60,7 +60,7 @@ func (t *TaskMysqlRepo) CreateTask(task *entity.TaskRequest) error {
 	return nil
 }
 
-func (t *TaskMysqlRepo) CheckTask(task *entity.Task) error {
+func (t *TaskMysqlRepo) CheckTask(id int) error {
 	query := `UPDATE task SET completed = ? WHERE id = ?`
 	stmt, err := t.db.Prepare(query)
 	if err != nil {
@@ -68,7 +68,7 @@ func (t *TaskMysqlRepo) CheckTask(task *entity.Task) error {
 	}
 	defer stmt.Close()
 
-	_, err = stmt.Exec(task.Completed, task.ID)
+	_, err = stmt.Exec(true, id)
 	if err != nil {
 		return err
 	}
@@ -90,22 +90,17 @@ func (t *TaskMysqlRepo) UpdateTask(task *entity.Task) error {
 	return nil
 }
 
-// func (t *TaskMysqlRepo) GetHistoryTaskList() ([]*entity.Task, error) {
-// 	query := `SELECT id, title, description, created_at, completed FROM task WHERE completed = 1 ORDER BY created_at DESC`
-// 	rows, err := t.db.Query(query)
-// 	if err != nil {
-// 		return nil, err
-// 	}
-// 	defer rows.Close()
+func (t *TaskMysqlRepo) DeleteTask(id int) error {
+	query := `DELETE FROM task WHERE id = ?`
+	stmt, err := t.db.Prepare(query)
+	if err != nil {
+		return err
+	}
+	defer stmt.Close()
 
-// 	var tasks []*entity.Task
-// 	for rows.Next() {
-// 		task := new(entity.Task)
-// 		err := rows.Scan(&task.ID, &task.Title, &task.Description, &task.CreatedAt, &task.Completed)
-// 		if err != nil {
-// 			return nil, err
-// 		}
-// 		tasks = append(tasks, task)
-// 	}
-// 	return tasks, nil
-// }
+	_, err = stmt.Exec(id)
+	if err != nil {
+		return err
+	}
+	return nil
+}

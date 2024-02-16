@@ -7,6 +7,9 @@ import (
 	http_resp "service-task-list/internal/controller/response"
 	"service-task-list/internal/entity"
 	"service-task-list/pkg/logger"
+	"strconv"
+
+	"github.com/gorilla/mux"
 )
 
 func (c *TaskRoutes) GetTaskList(w http.ResponseWriter, r *http.Request) {
@@ -98,21 +101,29 @@ func (c *TaskRoutes) CreateTask(w http.ResponseWriter, r *http.Request) {
 }
 
 func (c *TaskRoutes) CheckTask(w http.ResponseWriter, r *http.Request) {
-	var payload entity.Task
-
-	decoder := json.NewDecoder(r.Body)
-	if err := decoder.Decode(&payload); err != nil {
-		http_resp.HttpErrorResponse(w, false, http.StatusBadRequest, "400", err.Error())
+	param := mux.Vars(r)
+	taskId := param["task_id"]
+	intTaskId, err := strconv.Atoi(taskId)
+	if err != nil {
+		defer c.l.CreateLog(&logger.Log{
+			Event:      commons.FAIL_CHECK_TASK + "|CHECKLIST|CONVERT_ID",
+			Method:     "POST",
+			StatusCode: http.StatusInternalServerError,
+			Request:    intTaskId,
+			Response:   err,
+			Message:    commons.FAIL_CHECK_TASK,
+		}, logger.LVL_ERROR)
+		http_resp.HttpErrorResponse(w, false, http.StatusInternalServerError, "500", err.Error())
 		return
 	}
 
-	err := c.tu.CheckTask(&payload)
+	err = c.tu.CheckTask(intTaskId)
 	if err != nil {
 		defer c.l.CreateLog(&logger.Log{
 			Event:      commons.FAIL_CHECK_TASK + "|CHECKLIST",
 			Method:     "POST",
 			StatusCode: http.StatusInternalServerError,
-			Request:    payload,
+			Request:    intTaskId,
 			Response:   err,
 			Message:    commons.FAIL_CHECK_TASK,
 		}, logger.LVL_ERROR)
@@ -124,7 +135,7 @@ func (c *TaskRoutes) CheckTask(w http.ResponseWriter, r *http.Request) {
 		Event:      commons.SUCCESS_CHECKLIST_TASK + "|CHECKLIST",
 		Method:     http.MethodPut,
 		StatusCode: http.StatusOK,
-		Request:    payload,
+		Request:    intTaskId,
 		Response:   err,
 		Message:    commons.SUCCESS_CHECKLIST_TASK,
 	}, logger.LVL_INFO)
@@ -165,4 +176,47 @@ func (c *TaskRoutes) UpdateTask(w http.ResponseWriter, r *http.Request) {
 	}, logger.LVL_INFO)
 
 	http_resp.HttpSuccessResponse(w, true, http.StatusOK, "200", commons.SUCCESS_UPDATE_TASK, err)
+}
+
+func (c *TaskRoutes) DeleteTask(w http.ResponseWriter, r *http.Request) {
+	param := mux.Vars(r)
+	taskId := param["task_id"]
+	intTaskId, err := strconv.Atoi(taskId)
+	if err != nil {
+		defer c.l.CreateLog(&logger.Log{
+			Event:      commons.FAIL_DELETE_TASK + "|CONVERT_ID",
+			Method:     "POST",
+			StatusCode: http.StatusInternalServerError,
+			Request:    intTaskId,
+			Response:   err,
+			Message:    commons.FAIL_DELETE_TASK,
+		}, logger.LVL_ERROR)
+		http_resp.HttpErrorResponse(w, false, http.StatusInternalServerError, "500", err.Error())
+		return
+	}
+
+	err = c.tu.DeleteTask(intTaskId)
+	if err != nil {
+		defer c.l.CreateLog(&logger.Log{
+			Event:      commons.FAIL_DELETE_TASK + "|DELETE",
+			Method:     "POST",
+			StatusCode: http.StatusInternalServerError,
+			Request:    taskId,
+			Response:   err,
+			Message:    commons.FAIL_DELETE_TASK,
+		}, logger.LVL_ERROR)
+		http_resp.HttpErrorResponse(w, false, http.StatusInternalServerError, "500", err.Error())
+		return
+	}
+
+	c.l.CreateLog(&logger.Log{
+		Event:      commons.SUCCESS_DELETE_TASK + "|DELETE",
+		Method:     http.MethodDelete,
+		StatusCode: http.StatusOK,
+		Request:    taskId,
+		Response:   err,
+		Message:    commons.SUCCESS_DELETE_TASK,
+	}, logger.LVL_INFO)
+
+	http_resp.HttpSuccessResponse(w, true, http.StatusOK, "200", commons.SUCCESS_DELETE_TASK, err)
 }

@@ -238,3 +238,8 @@ time=2024-02-18 10:14:48 level=info msg=Success Create Sub Task event=Success Cr
 time=2024-02-18 10:15:49 level=info msg=Success CHECKLIST Task event=Success CHECKLIST Task|CHECKLIST_SUB_TASK key= method=PUT query= request=4 response=<nil> response_time=0s status_code=200
 time=2024-02-18 10:17:41 level=info msg=Success CHECKLIST Task event=Success CHECKLIST Task|CHECKLIST_SUB_TASK key= method=PUT query= request=4 response=<nil> response_time=0s status_code=200
 time=2024-02-18 10:18:15 level=info msg=Success CHECKLIST Sub Task event=Success CHECKLIST Sub Task|CHECKLIST_SUB_TASK key= method=PUT query= request=4 response=<nil> response_time=0s status_code=200
+time=2024-02-18 16:42:36 level=info msg=Success GET PERCENTAGE SUB Task event=Success GET PERCENTAGE SUB Task|GET key= method=GET query= request=5 response=0 response_time=0s status_code=200
+time=2024-02-18 16:43:14 level=info msg=Success Create Sub Task event=Success Create Sub Task key= method=POST query= request={0 0 Nyalakan air false} response=<nil> response_time=0s status_code=201
+time=2024-02-18 16:48:32 level=info msg=Success GET PERCENTAGE SUB Task event=Success GET PERCENTAGE SUB Task|GET key= method=GET query= request=5 response=&{5 0 0%} response_time=0s status_code=200
+time=2024-02-18 16:50:30 level=info msg=Success CHECKLIST Sub Task event=Success CHECKLIST Sub Task|CHECKLIST_SUB_TASK key= method=PUT query= request=5 response=<nil> response_time=0s status_code=200
+time=2024-02-18 16:50:41 level=info msg=Success GET PERCENTAGE SUB Task event=Success GET PERCENTAGE SUB Task|GET key= method=GET query= request=5 response=&{5 50 50%} response_time=0s status_code=200

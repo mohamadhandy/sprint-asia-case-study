@@ -25,6 +25,7 @@ func NewTaskRoutes(r *mux.Router, l *logger.Logger, cfg *config.Config, tu task.
 	group.HandleFunc("/{task_id}", c.UpdateTask).Methods(http.MethodPut)
 	group.HandleFunc("", c.CreateTask).Methods(http.MethodPost)
 	group.HandleFunc("/{task_id}", c.DeleteTask).Methods(http.MethodDelete)
+	group.HandleFunc("/{task_id}/percentage", c.GetPercentageSubTask).Methods(http.MethodGet)
 	group.HandleFunc("/{task_id}/subtasks", c.CreateSubTask).Methods(http.MethodPost)
 	group.HandleFunc("/{task_id}/subtasks/{sub_task_id}", c.UpdateSubTask).Methods(http.MethodPut)
 	group.HandleFunc("/{task_id}/subtasks/{sub_task_id}", c.DeleteSubTask).Methods(http.MethodDelete)

@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "TASKLIST",
-    "dateExported": "2024-02-18T04:47:38.201Z",
+    "dateExported": "2024-02-18T09:51:38.247Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -161,6 +161,20 @@
             "sortNum": 100000,
             "created": "2024-02-18T04:47:02.394Z",
             "modified": "2024-02-18T04:47:02.394Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4745b973-b54c-4262-91a9-5b92b36cbf39",
+            "colId": "396fd5d1-76ef-4836-aa6c-23b51d21c77c",
+            "containerId": "",
+            "name": "/v1/tasks/{id}/percentage",
+            "url": "localhost:8001/v1/tasks/5/percentage",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-02-18T09:51:19.831Z",
+            "modified": "2024-02-18T09:51:19.831Z",
             "headers": [],
             "params": [],
             "tests": []

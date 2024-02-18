@@ -35,8 +35,9 @@ type SubTask struct {
 
 // TaskProgress struct represents the 'task_progress' table
 type TaskProgress struct {
-	TaskID     int `json:"task_id"`
-	Percentage int `json:"percentage"`
+	TaskID         int    `json:"task_id"`
+	Percentage     int    `json:"percentage"`
+	PercentageTask string `json:"percentage_task"`
 }
 
 // TaskStatus struct represents the 'task_status' table

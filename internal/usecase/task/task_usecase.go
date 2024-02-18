@@ -5,6 +5,7 @@ import (
 	"service-task-list/internal/entity"
 	"service-task-list/internal/repository/mysql"
 	"service-task-list/pkg/logger"
+	"strconv"
 )
 
 type ITaskUseCase interface {
@@ -17,6 +18,7 @@ type ITaskUseCase interface {
 	UpdateSubTask(taskId int, subTask *entity.SubTask) error
 	DeleteSubTask(taskId int, subTaskId int) error
 	CheckSubTask(taskId int, subTaskId int) error
+	GetPercentageSubTask(taskId int) (*entity.TaskProgress, error)
 }
 
 type TaskUseCase struct {
@@ -99,4 +101,17 @@ func (t *TaskUseCase) CheckSubTask(taskId int, subTaskId int) error {
 		return err
 	}
 	return nil
+}
+
+func (t *TaskUseCase) GetPercentageSubTask(taskId int) (*entity.TaskProgress, error) {
+	percentage, err := t.tr.GetPercentageSubTask(taskId)
+	if err != nil {
+		return nil, err
+	}
+	percentageStringTask := strconv.Itoa(percentage) + "%"
+	return &entity.TaskProgress{
+		TaskID:         taskId,
+		Percentage:     percentage,
+		PercentageTask: percentageStringTask,
+	}, nil
 }

@@ -504,3 +504,46 @@ func (c *TaskRoutes) CheckSubTask(w http.ResponseWriter, r *http.Request) {
 
 	http_resp.HttpSuccessResponse(w, true, http.StatusOK, "200", commons.SUCCESS_CHECKLIST_SUBTASK, err)
 }
+
+func (c *TaskRoutes) GetPercentageSubTask(w http.ResponseWriter, r *http.Request) {
+	param := mux.Vars(r)
+	taskId := param["task_id"]
+	intTaskId, err := strconv.Atoi(taskId)
+	if err != nil {
+		defer c.l.CreateLog(&logger.Log{
+			Event:      commons.FAIL_GET_PERCENTAGE_SUB_TASK + "|CONVERT_ID",
+			Method:     "GET",
+			StatusCode: http.StatusInternalServerError,
+			Request:    intTaskId,
+			Response:   err,
+			Message:    commons.FAIL_GET_PERCENTAGE_SUB_TASK,
+		}, logger.LVL_ERROR)
+		http_resp.HttpErrorResponse(w, false, http.StatusInternalServerError, "500", err.Error())
+		return
+	}
+
+	res, err := c.tu.GetPercentageSubTask(intTaskId)
+	if err != nil {
+		defer c.l.CreateLog(&logger.Log{
+			Event:      commons.FAIL_GET_PERCENTAGE_SUB_TASK + "|GET",
+			Method:     "GET",
+			StatusCode: http.StatusInternalServerError,
+			Request:    intTaskId,
+			Response:   err,
+			Message:    commons.FAIL_GET_PERCENTAGE_SUB_TASK,
+		}, logger.LVL_ERROR)
+		http_resp.HttpErrorResponse(w, false, http.StatusInternalServerError, "500", err.Error())
+		return
+	}
+
+	c.l.CreateLog(&logger.Log{
+		Event:      commons.SUCCESS_GET_PERCENTAGE_SUB_TASK + "|GET",
+		Method:     "GET",
+		StatusCode: http.StatusOK,
+		Request:    intTaskId,
+		Response:   res,
+		Message:    commons.SUCCESS_GET_PERCENTAGE_SUB_TASK,
+	}, logger.LVL_INFO)
+
+	http_resp.HttpSuccessResponse(w, true, http.StatusOK, "200", commons.SUCCESS_GET_PERCENTAGE_SUB_TASK, res)
+}

@@ -17,8 +17,8 @@ type TaskRepository interface {
 	UpdateSubTask(taskId int, subTask *entity.SubTask) error
 	DeleteSubTask(taskId int, subTaskId int) error
 	GetAllSubTaskByCompleted(taskId int, completed string) ([]*entity.SubTask, error)
-	// GetAllSubTask(taskId int) ([]*entity.SubTask, error)
 	CheckSubTask(taskId int, subTaskId int) error
+	GetPercentageSubTask(taskId int) (int, error)
 }
 
 type TaskMysqlRepo struct {
@@ -188,26 +188,6 @@ func (t *TaskMysqlRepo) GetAllSubTaskByCompleted(taskId int, completed string) (
 	return subTasks, nil
 }
 
-// func (t *TaskMysqlRepo) GetAllSubTask(taskId int) ([]*entity.SubTask, error) {
-// 	query := `SELECT id, title, completed FROM sub_task WHERE task_id = ?`
-// 	rows, err := t.db.Query(query, taskId)
-// 	if err != nil {
-// 		return nil, err
-// 	}
-// 	defer rows.Close()
-
-// 	var subTasks []*entity.SubTask
-// 	for rows.Next() {
-// 		subTask := new(entity.SubTask)
-// 		err := rows.Scan(&subTask.ID, &subTask.Title, &subTask.Completed)
-// 		if err != nil {
-// 			return nil, err
-// 		}
-// 		subTasks = append(subTasks, subTask)
-// 	}
-// 	return subTasks, nil
-// }
-
 func (t *TaskMysqlRepo) CheckSubTask(taskId int, subTaskId int) error {
 	query := `UPDATE sub_task SET completed = ? WHERE id = ? AND task_id = ?`
 	stmt, err := t.db.Prepare(query)
@@ -235,4 +215,17 @@ func (t *TaskMysqlRepo) CheckSubTask(taskId int, subTaskId int) error {
 		return nil
 	}
 	return nil
+}
+
+func (t *TaskMysqlRepo) GetPercentageSubTask(taskId int) (int, error) {
+	subTaskCompleted, err := t.GetAllSubTaskByCompleted(taskId, "true")
+	if err != nil {
+		return 0, err
+	}
+	allSubTask, err := t.GetAllSubTaskByCompleted(taskId, "all")
+	if err != nil {
+		return 0, err
+	}
+	percentage := (len(subTaskCompleted) * 100) / len(allSubTask)
+	return percentage, nil
 }

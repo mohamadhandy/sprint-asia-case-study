@@ -1,0 +1,169 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "TASKLIST",
+    "dateExported": "2024-02-18T04:47:38.201Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "afc86bbd-45d1-4f4a-b21c-c322e0cf870c",
+            "colId": "396fd5d1-76ef-4836-aa6c-23b51d21c77c",
+            "containerId": "",
+            "name": "/v1/tasks/{id}",
+            "url": "localhost:8001/v1/tasks/4",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2024-02-18T04:45:25.342Z",
+            "modified": "2024-02-18T04:45:25.342Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": 4,\n  \"title\": \"Ke minimarket\",\n  \"description\": \"beli bumbu dapur dan stock makanan\",\n  \"created_at\": \"2024-02-16T07:00:00Z\",\n  \"completed\": false\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "321c1065-d42b-4400-a7c0-adc78cfa367c",
+            "colId": "396fd5d1-76ef-4836-aa6c-23b51d21c77c",
+            "containerId": "",
+            "name": "/v1/tasks/{id}/subtasks/{subtaskid}",
+            "url": "localhost:8001/v1/tasks/4/subtasks/1",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-02-18T04:45:35.788Z",
+            "modified": "2024-02-18T04:45:35.788Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": 1,\n  \"title\": \"Beli Lengkuas\",\n  \"completed\": false\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3fb43942-c105-4c73-8f38-059b1b9b6e74",
+            "colId": "396fd5d1-76ef-4836-aa6c-23b51d21c77c",
+            "containerId": "",
+            "name": "/v1/tasks/{id}/subtasks/{subtaskid}/checklist",
+            "url": "localhost:8001/v1/tasks/4/subtasks/5/checklist",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-02-18T04:45:42.598Z",
+            "modified": "2024-02-18T04:45:42.598Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5638b0f1-ff1c-4d28-8dc8-987a0ba10618",
+            "colId": "396fd5d1-76ef-4836-aa6c-23b51d21c77c",
+            "containerId": "",
+            "name": "/v1/tasks/{id}/subtasks/{subtaskid}",
+            "url": "localhost:8001/v1/tasks/4/subtasks/1",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-02-18T04:45:50.988Z",
+            "modified": "2024-02-18T04:45:50.988Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e0fb4b3a-84b1-4192-b40e-dfdb2b9fb736",
+            "colId": "396fd5d1-76ef-4836-aa6c-23b51d21c77c",
+            "containerId": "",
+            "name": "/v1/tasks/{id}/checklist",
+            "url": "localhost:8001/v1/tasks/2/checklist",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-02-18T04:46:10.288Z",
+            "modified": "2024-02-18T04:46:10.288Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "dfab6e0f-1d76-457b-ab88-a08043b25ff5",
+            "colId": "396fd5d1-76ef-4836-aa6c-23b51d21c77c",
+            "containerId": "",
+            "name": "/v1/tasks",
+            "url": "localhost:8001/v1/tasks",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-02-18T04:46:17.554Z",
+            "modified": "2024-02-18T04:46:17.554Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Cuci kendaraan\",\n  \"description\": \"Cuci kendaraan\",\n  \"created_at\": \"2024-02-16T10:00:00Z\",\n  \"completed\": false\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "577be45d-78f4-4986-b8e2-9feb6f56e440",
+            "colId": "396fd5d1-76ef-4836-aa6c-23b51d21c77c",
+            "containerId": "",
+            "name": "/v1/tasks/{id}/subtasks",
+            "url": "localhost:8001/v1/tasks/4/subtasks",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-02-18T04:46:24.111Z",
+            "modified": "2024-02-18T04:46:24.111Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Beli Kecap\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d176ba9e-fc20-4212-831c-5ada3fbee063",
+            "colId": "396fd5d1-76ef-4836-aa6c-23b51d21c77c",
+            "containerId": "",
+            "name": "/v1/tasks/{id}",
+            "url": "localhost:8001/v1/tasks/3",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2024-02-18T04:46:30.625Z",
+            "modified": "2024-02-18T04:46:30.625Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4d8a89e1-073e-487a-b8e0-5e4adb4c9667",
+            "colId": "396fd5d1-76ef-4836-aa6c-23b51d21c77c",
+            "containerId": "",
+            "name": "/v1/tasks/history",
+            "url": "localhost:8001/v1/tasks/history",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-02-18T04:46:44.568Z",
+            "modified": "2024-02-18T04:46:44.568Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e7b7c537-cab1-4288-9852-8a8e254f503c",
+            "colId": "396fd5d1-76ef-4836-aa6c-23b51d21c77c",
+            "containerId": "",
+            "name": "/v1/tasks",
+            "url": "localhost:8001/v1/tasks",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-02-18T04:47:02.394Z",
+            "modified": "2024-02-18T04:47:02.394Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

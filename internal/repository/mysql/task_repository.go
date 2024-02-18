@@ -13,6 +13,12 @@ type TaskRepository interface {
 	CheckTask(id int) error
 	UpdateTask(task *entity.Task) error
 	DeleteTask(id int) error
+	CreateSubTask(taskId int, subTask *entity.SubTask) error
+	UpdateSubTask(taskId int, subTask *entity.SubTask) error
+	DeleteSubTask(taskId int, subTaskId int) error
+	GetAllSubTaskByCompleted(taskId int, completed string) ([]*entity.SubTask, error)
+	// GetAllSubTask(taskId int) ([]*entity.SubTask, error)
+	CheckSubTask(taskId int, subTaskId int) error
 }
 
 type TaskMysqlRepo struct {
@@ -101,6 +107,132 @@ func (t *TaskMysqlRepo) DeleteTask(id int) error {
 	_, err = stmt.Exec(id)
 	if err != nil {
 		return err
+	}
+	return nil
+}
+
+func (t *TaskMysqlRepo) CreateSubTask(taskId int, subTask *entity.SubTask) error {
+	query := `INSERT INTO sub_task (task_id, title, completed) VALUES (?, ?, ?)`
+	stmt, err := t.db.Prepare(query)
+	if err != nil {
+		return err
+	}
+	defer stmt.Close()
+
+	_, err = stmt.Exec(taskId, subTask.Title, false)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func (t *TaskMysqlRepo) UpdateSubTask(taskId int, subTask *entity.SubTask) error {
+	query := `UPDATE sub_task SET title = ?, completed = ? WHERE id = ? AND task_id = ?`
+	stmt, err := t.db.Prepare(query)
+	if err != nil {
+		return err
+	}
+	defer stmt.Close()
+
+	_, err = stmt.Exec(subTask.Title, false, subTask.ID, taskId)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func (t *TaskMysqlRepo) DeleteSubTask(taskId int, subTaskId int) error {
+	query := `DELETE FROM sub_task WHERE id = ? AND task_id = ?`
+	stmt, err := t.db.Prepare(query)
+	if err != nil {
+		return err
+	}
+	defer stmt.Close()
+
+	_, err = stmt.Exec(subTaskId, taskId)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func (t *TaskMysqlRepo) GetAllSubTaskByCompleted(taskId int, completed string) ([]*entity.SubTask, error) {
+	var query string
+	var rows *sql.Rows
+	var err error
+	if completed == "true" {
+		query = `SELECT id, title, completed FROM sub_task WHERE task_id = ? AND completed = ?`
+		rows, err = t.db.Query(query, taskId, true)
+	} else if completed == "false" {
+		query = `SELECT id, title, completed FROM sub_task WHERE task_id = ? AND completed = ?`
+		rows, err = t.db.Query(query, taskId, false)
+	} else {
+		query = `SELECT id, title, completed FROM sub_task WHERE task_id = ?`
+		rows, err = t.db.Query(query, taskId)
+	}
+
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var subTasks []*entity.SubTask
+	for rows.Next() {
+		subTask := new(entity.SubTask)
+		err := rows.Scan(&subTask.ID, &subTask.Title, &subTask.Completed)
+		if err != nil {
+			return nil, err
+		}
+		subTasks = append(subTasks, subTask)
+	}
+	return subTasks, nil
+}
+
+// func (t *TaskMysqlRepo) GetAllSubTask(taskId int) ([]*entity.SubTask, error) {
+// 	query := `SELECT id, title, completed FROM sub_task WHERE task_id = ?`
+// 	rows, err := t.db.Query(query, taskId)
+// 	if err != nil {
+// 		return nil, err
+// 	}
+// 	defer rows.Close()
+
+// 	var subTasks []*entity.SubTask
+// 	for rows.Next() {
+// 		subTask := new(entity.SubTask)
+// 		err := rows.Scan(&subTask.ID, &subTask.Title, &subTask.Completed)
+// 		if err != nil {
+// 			return nil, err
+// 		}
+// 		subTasks = append(subTasks, subTask)
+// 	}
+// 	return subTasks, nil
+// }
+
+func (t *TaskMysqlRepo) CheckSubTask(taskId int, subTaskId int) error {
+	query := `UPDATE sub_task SET completed = ? WHERE id = ? AND task_id = ?`
+	stmt, err := t.db.Prepare(query)
+	if err != nil {
+		return err
+	}
+	defer stmt.Close()
+	_, err = stmt.Exec(true, subTaskId, taskId)
+	if err != nil {
+		return err
+	}
+	// check subtask is all completed
+	subTaskCompleted, err := t.GetAllSubTaskByCompleted(taskId, "true")
+	if err != nil {
+		return err
+	}
+	allSubTask, err := t.GetAllSubTaskByCompleted(taskId, "all")
+	if err != nil {
+		return err
+	} else if len(subTaskCompleted) == len(allSubTask) {
+		err = t.CheckTask(taskId)
+		if err != nil {
+			return err
+		}
+		return nil
 	}
 	return nil
 }

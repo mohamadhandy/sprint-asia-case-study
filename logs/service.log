@@ -31,3 +31,210 @@ time=2024-02-16 20:56:19 level=info msg=Success Get Task List event=HTTP|TASK_LI
 time=2024-02-16 20:56:21 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
 time=2024-02-16 20:57:58 level=info msg=Success CHECKLIST Task event=Success CHECKLIST Task|CHECKLIST key= method=PUT query= request=2 response=<nil> response_time=0s status_code=200
 time=2024-02-16 20:58:12 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-16 21:10:23 level=error msg=Fail UPDATE Task event=Fail UPDATE Task key= method=PUT query= request={2 Ke minimarket beli bumbu dapur dan stock makanan 2024-02-16 07:00:00 +0000 UTC false} response=<nil> response_time=0s status_code=400
+time=2024-02-16 21:11:35 level=info msg=Success Update Task event=Success Update Task key= method=PUT query= request={3 Ke minimarket beli bumbu dapur dan stock makanan 2024-02-16 07:00:00 +0000 UTC false} response=<nil> response_time=0s status_code=200
+time=2024-02-16 21:11:58 level=info msg=Success Update Task event=Success Update Task key= method=PUT query= request={4 Ke minimarket beli bumbu dapur dan stock makanan 2024-02-16 07:00:00 +0000 UTC false} response=<nil> response_time=0s status_code=200
+time=2024-02-17 16:34:13 level=error msg=Fail Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=GET TASK LIST response=dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it. response_time=0s status_code=500
+time=2024-02-17 16:34:13 level=error msg=Fail Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=GET TASK LIST response=dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it. response_time=0s status_code=500
+time=2024-02-17 16:34:55 level=error msg=Fail Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=GET TASK LIST response=dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it. response_time=0s status_code=500
+time=2024-02-17 16:34:55 level=error msg=Fail Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=GET TASK LIST response=dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it. response_time=0s status_code=500
+time=2024-02-17 16:55:03 level=error msg=Fail Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=GET TASK LIST response=dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it. response_time=0s status_code=500
+time=2024-02-17 16:58:29 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 16:59:31 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 16:59:31 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 17:01:04 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 17:01:04 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 17:01:54 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 17:02:23 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 17:02:38 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 17:03:06 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 17:03:06 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 17:04:37 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 17:04:43 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 17:04:43 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 17:05:27 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 17:05:27 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 18:51:54 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 18:51:54 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:00:03 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:00:03 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:06:56 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:06:56 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:07:06 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:07:31 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:07:31 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:10:52 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:10:52 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:12:49 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:18:30 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:18:50 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:18:50 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:23:40 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:23:40 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:36:23 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:36:23 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:37:09 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:37:09 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:37:26 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:37:26 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:37:51 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:37:51 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:37:58 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:37:58 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:38:04 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:38:04 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:38:34 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:38:34 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:38:43 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:38:43 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:39:07 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:39:07 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:39:17 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:39:17 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:39:42 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:39:42 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:51:26 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:51:26 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:51:50 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:51:50 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:52:13 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:52:13 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:53:41 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:57:00 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:57:00 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:57:44 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:57:44 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:58:07 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:58:07 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:58:14 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:58:14 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:58:24 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:58:24 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:58:33 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:58:33 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:59:01 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:59:21 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:59:21 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:59:27 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:59:27 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:59:41 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 19:59:41 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:03:27 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:03:27 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:03:27 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:03:27 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:27:36 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:27:36 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:27:36 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:27:36 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:28:02 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:28:02 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:28:02 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:28:02 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:28:10 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:28:10 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:28:10 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:28:10 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:28:55 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:28:55 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:28:55 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:28:55 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:29:00 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:29:00 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:29:00 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:29:00 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:29:20 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:29:20 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:29:20 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:29:20 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:29:44 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:29:44 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:29:44 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:29:44 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:29:54 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:29:54 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:29:54 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:29:54 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:29:58 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:29:58 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:29:58 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:29:58 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:30:09 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:30:09 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:30:09 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:30:09 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:30:23 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:30:23 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:30:23 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:30:23 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:30:55 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:30:55 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:30:55 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:30:56 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:32:08 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:32:08 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:32:08 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:32:08 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:32:48 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:32:48 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:32:48 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:32:48 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:32:55 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:32:55 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:32:55 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:32:55 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:34:43 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:34:43 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:34:43 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:34:43 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:35:53 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:35:53 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:35:53 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:35:53 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:36:09 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:36:09 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:36:09 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:36:09 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:36:14 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:36:14 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:36:14 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:36:14 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:36:19 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:36:19 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:36:19 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:36:19 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:36:24 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:36:24 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:36:24 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:36:24 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:36:33 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:36:33 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:36:33 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:36:33 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:40:04 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:40:04 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:40:04 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:40:27 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:40:27 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:40:27 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:40:27 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:41:28 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:41:28 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success response_time=0s status_code=200
+time=2024-02-17 20:41:28 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-17 20:41:28 level=info msg=Success Get Task List event=HTTP|TASK_LIST|GETTASKLIST key= method=GET query= request=<nil> response=Success GET HISTORY TASK LIST response_time=0s status_code=200
+time=2024-02-18 07:39:39 level=error msg=Fail CREATE SUB Task event=Fail CREATE SUB Task key= method=POST query= request={0 0 Beli Jahe false} response=Error 1136 (21S01): Column count doesn't match value count at row 1 response_time=0s status_code=500
+time=2024-02-18 07:40:39 level=info msg=Success Create Sub Task event=Success Create Sub Task key= method=POST query= request={0 0 Beli Jahe false} response=<nil> response_time=0s status_code=201
+time=2024-02-18 09:19:11 level=info msg=Success Update Sub Task event=Success Update Sub Task key= method=PUT query= request={1 0 Beli lengkuas false} response=<nil> response_time=0s status_code=200
+time=2024-02-18 09:20:32 level=info msg=Success Update Sub Task event=Success Update Sub Task key= method=PUT query= request={1 0 Beli lengkuas false} response=<nil> response_time=0s status_code=200
+time=2024-02-18 09:21:50 level=error msg=Fail UPDATE SUB Task event=Fail UPDATE SUB Task key= method=PUT query= request={1 0 Beli lengkuas false} response=<nil> response_time=0s status_code=400
+time=2024-02-18 09:25:21 level=info msg=Success Create Sub Task event=Success Create Sub Task key= method=POST query= request={0 0 Beli Garem false} response=<nil> response_time=0s status_code=201
+time=2024-02-18 09:27:04 level=info msg=Success Update Sub Task event=Success Update Sub Task key= method=PUT query= request={1 0 Beli Jahe false} response=<nil> response_time=0s status_code=200
+time=2024-02-18 09:28:20 level=info msg=Success Update Sub Task event=Success Update Sub Task key= method=PUT query= request={1 0 Beli Jahe false} response=<nil> response_time=0s status_code=200
+time=2024-02-18 09:28:59 level=info msg=Success Update Sub Task event=Success Update Sub Task key= method=PUT query= request={1 0 Beli Lengkuas false} response=<nil> response_time=0s status_code=200
+time=2024-02-18 09:33:37 level=info msg=Success Delete Sub Task event=Success Delete Sub Task key= method=DELETE query= request=4 response=<nil> response_time=0s status_code=200
+time=2024-02-18 09:35:49 level=info msg=Success Create Sub Task event=Success Create Sub Task key= method=POST query= request={0 0 Beli Gula false} response=<nil> response_time=0s status_code=201
+time=2024-02-18 09:36:27 level=info msg=Success Create Sub Task event=Success Create Sub Task key= method=POST query= request={0 0 Beli Semir Ban false} response=<nil> response_time=0s status_code=201
+time=2024-02-18 10:14:48 level=info msg=Success Create Sub Task event=Success Create Sub Task key= method=POST query= request={0 0 Beli Kecap false} response=<nil> response_time=0s status_code=201
+time=2024-02-18 10:15:49 level=info msg=Success CHECKLIST Task event=Success CHECKLIST Task|CHECKLIST_SUB_TASK key= method=PUT query= request=4 response=<nil> response_time=0s status_code=200
+time=2024-02-18 10:17:41 level=info msg=Success CHECKLIST Task event=Success CHECKLIST Task|CHECKLIST_SUB_TASK key= method=PUT query= request=4 response=<nil> response_time=0s status_code=200
+time=2024-02-18 10:18:15 level=info msg=Success CHECKLIST Sub Task event=Success CHECKLIST Sub Task|CHECKLIST_SUB_TASK key= method=PUT query= request=4 response=<nil> response_time=0s status_code=200

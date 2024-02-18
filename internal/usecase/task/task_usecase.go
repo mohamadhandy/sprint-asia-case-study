@@ -13,6 +13,10 @@ type ITaskUseCase interface {
 	CheckTask(id int) error
 	UpdateTask(task *entity.Task) error
 	DeleteTask(id int) error
+	CreateSubTask(taskId int, subTask *entity.SubTask) error
+	UpdateSubTask(taskId int, subTask *entity.SubTask) error
+	DeleteSubTask(taskId int, subTaskId int) error
+	CheckSubTask(taskId int, subTaskId int) error
 }
 
 type TaskUseCase struct {
@@ -59,6 +63,38 @@ func (t *TaskUseCase) UpdateTask(task *entity.Task) error {
 
 func (t *TaskUseCase) DeleteTask(id int) error {
 	err := t.tr.DeleteTask(id)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func (t *TaskUseCase) CreateSubTask(taskId int, subTask *entity.SubTask) error {
+	err := t.tr.CreateSubTask(taskId, subTask)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func (t *TaskUseCase) UpdateSubTask(taskId int, subTask *entity.SubTask) error {
+	err := t.tr.UpdateSubTask(taskId, subTask)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func (t *TaskUseCase) DeleteSubTask(taskId int, subTaskId int) error {
+	err := t.tr.DeleteSubTask(taskId, subTaskId)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func (t *TaskUseCase) CheckSubTask(taskId int, subTaskId int) error {
+	err := t.tr.CheckSubTask(taskId, subTaskId)
 	if err != nil {
 		return err
 	}

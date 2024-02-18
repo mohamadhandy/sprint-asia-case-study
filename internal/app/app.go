@@ -14,6 +14,8 @@ import (
 	"service-task-list/pkg/mysql"
 	"syscall"
 
+	"github.com/rs/cors"
+
 	"github.com/gorilla/mux"
 )
 
@@ -37,6 +39,16 @@ func Run(cfg *config.Config) {
 
 	// HTTP Server
 	handler := mux.NewRouter()
+	// Create a new CORS middleware
+	corsMiddleware := cors.New(cors.Options{
+		AllowedOrigins:   []string{"http://localhost:3000"},
+		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE"},
+		AllowedHeaders:   []string{"Content-Type", "Authorization"},
+		AllowCredentials: true,
+	})
+
+	// Use the CORS middleware
+	handler.Use(corsMiddleware.Handler)
 	v1.NewRouter(handler, l, cfg, taskUsecase)
 	httpServer := httpserver.New(handler, cfg, httpserver.Port(cfg.HTTPServer.Port))
 
